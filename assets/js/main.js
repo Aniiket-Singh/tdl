@@ -1,15 +1,23 @@
-$("ul").on("click", "li", function(){
+$("#print").on("click", function()
+{
+	window.print();
+})
+
+$("ul").on("click", "li", function()
+{
 	$(this).toggleClass("completed");	
 });
 
-$("ul").on("click", "span", function(event){
+$("ul").on("click", "span", function(event)
+{
 	$(this).parent().fadeOut(500, function(){
 		$(this).remove();
 	});
 	event.stopPropagation();
 });
 
-$("input[type='text'").keypress(function(event){
+$("input[type='text'").keypress(function(event)
+{
 	if(event.which === 13)
 	{
 		var todoText = $(this).val();
@@ -18,6 +26,10 @@ $("input[type='text'").keypress(function(event){
 	}	
 });
 
-$(".fa-plus").click(function(){
+$(".fa-plus").click(function()
+{
 	$("input[type='text'").fadeToggle();
 })
+
+
+	
